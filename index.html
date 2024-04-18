@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        main {
+            background-color: blueviolet;
+            width: 400px;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        section {
+            width: 200px;
+            height: 200px;
+            background-color: aquamarine;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        button {
+            width: 50%;
+            height: 15%;
+            font-size: larger;
+            font-weight: bolder;
+        }
+
+        main, section, button {
+            border: 0.2rem solid black;
+            border-radius: 10px;
+        }
+
+        button:hover{
+            cursor: pointer;
+            background-color: rgb(215, 211, 206, 05);
+            transform: scale(1.1);
+        }
+
+
+    </style>
+
+</head>
+<body>
+    
+    <main>
+        <section>
+            <h3>Clique no botão abaixo</h3>
+            <p>(aumente o volume)</p>
+            <button id="actionBtn">!</button>
+        </section>
+    </main>
+
+    <script>
+
+        const actionBtn = document.querySelector('#actionBtn')
+        
+        const btnFunction = () => {
+            const audio = new Audio('audio.mp3');
+            audio.play();
+            }
+
+        actionBtn.addEventListener('click', btnFunction)
+
+
+
+    </script>
+
+</body>
+</html>
